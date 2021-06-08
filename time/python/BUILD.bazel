@@ -1,0 +1,24 @@
+load("@rules_python//python:defs.bzl", "py_test")
+load("@time_pip_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "time",
+    srcs = [
+        "time.py",
+    ],
+    deps = [
+        requirement("python-dateutil")
+    ],
+)
+
+py_test(
+    name = "time_test",
+    srcs = [
+        "time_test.py",
+    ],
+    deps = [
+        requirement("python-dateutil")
+    ],
+    main = "time_test.py",
+    size = "small",
+)

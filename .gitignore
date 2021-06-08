@@ -1,0 +1,7 @@
+bazel-bin
+bazel-code-samples
+bazel-out
+bazel-testlogs
+__pycache__
+.vscode
+.mypy_cache
